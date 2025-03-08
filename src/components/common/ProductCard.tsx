@@ -29,14 +29,14 @@ const ProductCard = ({ product }: ProductCardProps) => {
             className="h-48 w-full object-cover transition-transform hover:scale-105 duration-300"
           />
         </Link>
-        <Badge className="absolute top-2 left-2 bg-white text-toycar-primary border-toycar-primary">
+        <Badge className="absolute top-2 left-2 bg-white text-primary border-primary">
           {product.condition}
         </Badge>
         <Button 
           variant="ghost" 
           size="icon" 
           className={`absolute top-2 right-2 rounded-full bg-white/80 ${
-            isFavorite ? 'text-toycar-secondary' : 'text-muted-foreground'
+            isFavorite ? 'text-secondary' : 'text-muted-foreground'
           } hover:bg-white`}
           onClick={() => toggleFavorite(product.id)}
         >
@@ -46,11 +46,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
       <CardContent className="p-4 flex-1">
         <div className="space-y-1">
           <Link to={`/product/${product.id}`} className="block">
-            <h3 className="font-medium line-clamp-2 hover:text-toycar-primary transition-colors">
+            <h3 className="font-medium line-clamp-2 hover:text-primary transition-colors">
               {product.name}
             </h3>
           </Link>
-          <p className="text-lg font-bold text-toycar-primary">
+          <p className="text-lg font-bold text-primary">
             ${product.price.toFixed(2)}
           </p>
           <p className="text-sm text-muted-foreground line-clamp-1">
